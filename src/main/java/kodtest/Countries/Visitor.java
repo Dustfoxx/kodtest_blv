@@ -1,4 +1,4 @@
-package Countries;
+package kodtest.Countries;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,11 +6,14 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 @Entity
-class User {
-  private @Id @GeneratedValue Long id;
+class Visitor {
+  private @Id
+  @GeneratedValue Long id;
   private String name;
 
-  User(String name) { this.name = name; }
+  Visitor(){}
+
+  Visitor(String name) { this.name = name;}
 
   public Long getId() { return this.id; }
 
@@ -25,11 +28,11 @@ class User {
     if (this == object) {
       return true;
     }
-    if (!(this instanceof User)) {
+    if (!(this instanceof Visitor)) {
       return false;
     }
-    User user = (User) object;
-    return Objects.equals(this.id, user.id) && Objects.equals(this.name, user.name);
+    Visitor visitor = (Visitor) object;
+    return Objects.equals(this.id, visitor.id) && Objects.equals(this.name, visitor.name);
   }
 
   @Override
@@ -39,7 +42,7 @@ class User {
 
   @Override
   public String toString() {
-    return "User{"
+    return "Visitor{"
         + "id=" + this.id + ", name=" + this.name + "}";
   }
 }
