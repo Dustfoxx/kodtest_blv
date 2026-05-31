@@ -1,0 +1,18 @@
+info:
+  name: Update Name Wrong ID
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: http://localhost:8080/visitors/15
+  body:
+    type: json
+    data: '{"name": "Jason Todd"}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

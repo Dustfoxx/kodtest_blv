@@ -1,0 +1,7 @@
+info:
+  name: User Story 3
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

@@ -1,0 +1,25 @@
+info:
+  name: Asia, name, asc, page 1 10
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:8080/countries
+  body:
+    type: json
+    data: |-
+      {
+        "page": "1",
+        "items_per_page": 10,
+        "region": "Asia",
+        "population": false,
+        "asc": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

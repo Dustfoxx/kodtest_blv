@@ -1,0 +1,7 @@
+package kodtest.Countries.exceptions;
+
+public class CountryNotFoundException extends RuntimeException{
+    public CountryNotFoundException(Long id) {
+        super("Could not find country with id " + id);
+    }
+}

@@ -1,8 +1,11 @@
-package kodtest.Countries;
+package kodtest.Countries.controllers;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+import kodtest.Countries.exceptions.VisitorNotFoundException;
+import kodtest.Countries.models.entities.Visitor;
+import kodtest.Countries.repositories.VisitorRepository;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +24,7 @@ public class VisitorController {
     private EntityModel<Visitor> createEntityModelFromVisitor(Visitor visitor){
         return EntityModel.of(visitor,
           linkTo(methodOn(VisitorController.class).getFromId(visitor.getId())).withSelfRel(),
-          linkTo(methodOn(VisitorController.class).all()).withRel("employees"));
+          linkTo(methodOn(VisitorController.class).all()).withRel("visitors"));
     }
 
     VisitorController(VisitorRepository repository){

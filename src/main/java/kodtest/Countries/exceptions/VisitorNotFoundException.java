@@ -1,7 +1,7 @@
-package kodtest.Countries;
+package kodtest.Countries.exceptions;
 
 public class VisitorNotFoundException extends RuntimeException{
-    VisitorNotFoundException(Long id) {
+    public VisitorNotFoundException(Long id) {
         super("Could not find visitor " + id);
     }
 }

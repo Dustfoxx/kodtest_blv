@@ -1,4 +1,4 @@
-package kodtest.Countries;
+package kodtest.Countries.models.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,14 +6,14 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 @Entity
-class Visitor {
+public class Visitor {
   private @Id
   @GeneratedValue Long id;
   private String name;
 
-  Visitor(){}
+  public Visitor(){}
 
-  Visitor(String name) { this.name = name;}
+  public Visitor(String name) { this.name = name;}
 
   public Long getId() { return this.id; }
 
@@ -28,7 +28,7 @@ class Visitor {
     if (this == object) {
       return true;
     }
-    if (!(this instanceof Visitor)) {
+    if (!(object instanceof Visitor)) {
       return false;
     }
     Visitor visitor = (Visitor) object;

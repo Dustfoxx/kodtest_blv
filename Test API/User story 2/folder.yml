@@ -1,0 +1,7 @@
+info:
+  name: User story 2
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

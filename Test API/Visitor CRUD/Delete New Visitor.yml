@@ -1,0 +1,15 @@
+info:
+  name: Delete New Visitor
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: http://localhost:8080/visitors/4
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
