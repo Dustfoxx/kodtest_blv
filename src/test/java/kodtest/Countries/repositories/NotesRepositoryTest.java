@@ -34,12 +34,4 @@ class NotesRepositoryTest {
         assertEquals(visitors.getFirst().getId(), notes.getFirst().getUserId().getId());
         assertEquals(countries.getFirst().getId(), notes.getFirst().getCountryId().getId());
     }
-
-    @Test
-    void updateNote(){
-        List<Visitor> visitors = visitorRepository.findAll();
-        List<Country> countries = countryRepository.findAll();
-
-        notesRepository.save(new Notes("Was a great time", visitors.getFirst(), countries.getFirst()));
-    }
 }
